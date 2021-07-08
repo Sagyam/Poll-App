@@ -1,5 +1,6 @@
 <script>
 	import Button from "../shared/Button.svelte";
+	import PollDetails from './PollDetails.svelte';
 	import { createEventDispatcher } from "svelte";
 
 	let dispatch = createEventDispatcher();

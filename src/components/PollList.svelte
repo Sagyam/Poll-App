@@ -1,13 +1,19 @@
 <script>
-	import { each } from "svelte/internal";
+	import pollStore from "../stores/PollStore";
+	import PollDetails from "./PollDetails.svelte";
 
 	export let polls = [];
+
+	pollStore.subscribe((data) => {
+		polls = data;
+	});
 </script>
 
 <div class="poll-list">
 	{#each polls as poll (poll.id)}
-		<div class="">
-			{poll.question}
+		<div>
+			<!-- forward to parent -->
+			<PollDetails {poll} on:vote />
 		</div>
 	{/each}
 </div>
