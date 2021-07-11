@@ -4,7 +4,7 @@
 	export let inverse = false;
 </script>
 
-<button class={type} class:flat class:inverse>
+<button class:flat class:inverse class={type} on:click>
 	<slot />
 </button>
 

@@ -7,7 +7,7 @@
 	{#each $pollStore as poll (poll.id)}
 		<div>
 			<!-- forward to parent -->
-			<PollDetails {poll} on:vote />
+			<PollDetails {poll} />
 		</div>
 	{/each}
 </div>
