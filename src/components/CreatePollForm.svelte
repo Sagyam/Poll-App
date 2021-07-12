@@ -1,6 +1,7 @@
 <script>
+	import { fade, slide, scale } from "svelte/transition";
 	import Button from "../shared/Button.svelte";
-	import PollDetails from "./PollDetails.svelte";
+
 	import { createEventDispatcher } from "svelte";
 	import pollStore from "../stores/PollStore";
 
@@ -55,7 +56,7 @@
 	}
 </script>
 
-<form on:submit|preventDefault={submitHandler}>
+<form on:submit|preventDefault={submitHandler} in:fade>
 	<div class="form-field">
 		<label for="question">Poll Question:</label>
 		<input type="text" id="question" bind:value={fields.question} />

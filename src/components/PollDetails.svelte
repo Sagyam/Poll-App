@@ -1,6 +1,6 @@
 <script>
 	import Button from "../shared/Button.svelte";
-
+	import { tweened } from "svelte/motion";
 	import Card from "../shared/Card.svelte";
 	import pollStore from "../stores/PollStore";
 
@@ -8,8 +8,14 @@
 
 	//reactive values
 	$: totalVotes = poll.votesA + poll.votesB;
-	$: percentA = Math.floor((100 / totalVotes) * poll.votesA);
-	$: percentB = Math.floor((100 / totalVotes) * poll.votesB);
+	$: percentA = Math.floor((100 / totalVotes) * poll.votesA) || 0; //apply 0 if NaN
+	$: percentB = Math.floor((100 / totalVotes) * poll.votesB) || 0; //note that 100/0 will  gives NaN intially
+
+	//tweened percentages
+	const tweenedA = tweened(0);
+	const tweenedB = tweened(0);
+	$: tweenedA.set(percentA);
+	$: tweenedB.set(percentB);
 
 	const handleVote = (option, id) => {
 		pollStore.update((currentPolls) => {
@@ -43,12 +49,12 @@
 		<p>Total Votes {totalVotes}</p>
 
 		<div class="answer" on:click={() => handleVote("a", poll.id)}>
-			<div class="percent percent-a" style="width: {percentA}%" />
+			<div class="percent percent-a" style="width: {$tweenedA}%" />
 			<span>{poll.answerA} ({poll.votesA})</span>
 		</div>
 
 		<div class="answer" on:click={() => handleVote("b", poll.id)}>
-			<div class="percent percent-b" style="width: {percentB}%" />
+			<div class="percent percent-b" style="width: {$tweenedB}%" />
 			<span>{poll.answerB} ({poll.votesB})</span>
 		</div>
 
@@ -102,5 +108,6 @@
 	.delete {
 		margin-top: 30px;
 		text-align: center;
+		user-select: none;
 	}
 </style>
