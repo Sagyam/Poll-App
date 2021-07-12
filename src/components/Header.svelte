@@ -4,7 +4,7 @@
 
 <header>
 	<ForkMe />
-	<h1><img src="/img/poll_ninja_logo.svg" alt="App Logo" /></h1>
+	<h1><img src="/img/hero.svg" alt="App Logo" /></h1>
 </header>
 
 <style>
