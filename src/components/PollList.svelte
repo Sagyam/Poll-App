@@ -19,4 +19,13 @@
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 	}
+
+	/* Extra small devices (phones, 600px and down) */
+	@media only screen and (max-width: 600px) {
+		.poll-list {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 20px;
+		}
+	}
 </style>
