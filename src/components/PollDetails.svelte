@@ -50,12 +50,18 @@
 
 		<div class="answer" on:click={() => handleVote("a", poll.id)}>
 			<div class="percent percent-a" style="width: {$tweenedA}%" />
-			<span>{poll.answerA} ({poll.votesA})</span>
+			<span>{poll.answerA} </span>
+			<p class="vote-count">
+				{poll.votesA} Votes
+			</p>
 		</div>
 
 		<div class="answer" on:click={() => handleVote("b", poll.id)}>
 			<div class="percent percent-b" style="width: {$tweenedB}%" />
-			<span>{poll.answerB} ({poll.votesB})</span>
+			<span>{poll.answerB}</span>
+			<p class="vote-count">
+				{poll.votesB} Votes
+			</p>
 		</div>
 
 		<div class="delete">
@@ -109,5 +115,11 @@
 		margin-top: 30px;
 		text-align: center;
 		user-select: none;
+	}
+	.vote-count {
+		margin-left: 20px;
+		font-size: 1.2rem;
+		font-weight: bolder;
+		color: black;
 	}
 </style>
