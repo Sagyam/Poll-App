@@ -1,7 +1,4 @@
-
 # Polling App
-
-![Logo](https://github.com/Sagyam/Poll-App/blob/master/public/favicon.png?raw=true)
 
 ![GitHub](https://img.shields.io/github/license/sagyam/Poll-App?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Sagyam/Poll-App?style=for-the-badge)

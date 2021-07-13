@@ -4,6 +4,7 @@
 	import Tabs from "./shared/Tabs.svelte";
 	import CreatePollForm from "./components/CreatePollForm.svelte";
 	import PollList from "./components/PollList.svelte";
+	import Meta from "svelte-meta";
 
 	let items = ["Current Polls", "Add New Poll"];
 	let activeItem = "Current Polls";
@@ -16,6 +17,13 @@
 		activeItem = "Current Polls";
 	};
 </script>
+
+<Meta
+	title="Poll App"
+	description="Create and Vote on Polls"
+	image="https://raw.githubusercontent.com/Sagyam/Poll-App/master/public/favicon.png"
+	url="https://sagyam-polling-app.netlify.app/"
+/>
 
 <Header />
 
