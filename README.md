@@ -1,8 +1,7 @@
 # Polling App
 
 ![GitHub](https://img.shields.io/github/license/sagyam/Poll-App?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/Sagyam/Poll-App?style=for-the-badge)
-![Lines of code](https://img.shields.io/tokei/lines/github/sagyam/Poll-App?style=for-the-badge)
+[![wakatime](https://wakatime.com/badge/user/4ce09006-1b8c-491f-ace1-a70b32d5fc1c/project/93f20be4-4230-4f4a-ab3e-52c17918a902.svg?style=for-the-badge)](https://wakatime.com/badge/user/4ce09006-1b8c-491f-ace1-a70b32d5fc1c/project/93f20be4-4230-4f4a-ab3e-52c17918a902?style=for-the-badge)
 ![Website](https://img.shields.io/website?down_message=Down&style=for-the-badge&up_message=Up&url=https%3A%2F%2Fsagyam-polling-app.netlify.app%2F)
 
 A simple polling app made with Svelte
